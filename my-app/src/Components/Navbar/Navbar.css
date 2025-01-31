@@ -1,0 +1,136 @@
+/* General Navbar styles */
+.navbar {
+    background-color: #f8f9fa; /* Light background */
+    position: fixed; /* Fixes navbar to the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Span full width */
+    padding: 1.5rem 3rem; /* Increased padding for larger size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    height: 90px; /* Increased height for a bigger navbar */
+  }
+  
+  /* Branding */
+  .navbar-brand {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    width:90px;
+  }
+  
+  .navbar-brand:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  /* Navbar links */
+  .navbar-nav .nav-item .nav-link {
+    color: #555;
+    font-size: 1.5rem; /* Larger font size */
+    padding: 0.75rem 1.5rem; /* Larger padding */
+    transition: color 0.3s ease;
+    width:120px;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #007bff; /* Blue on hover */
+  }
+  
+  /* Disabled state */
+  .navbar-nav .nav-item .nav-link.disabled {
+    color: #6c757d;
+    pointer-events: none;
+  }
+  
+  /* Navbar Toggle Button */
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 1.75rem; /* Larger toggle button */
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* For mobile view, adjust navbar content */
+  .collapse.navbar-collapse {
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .collapse.navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Increased gap between items */
+  }
+  
+  /* Adjust navbar links for mobile */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 1rem 0;
+    width: 100%;
+  }
+  
+  /* Style search form */
+  .d-flex.input-group {
+    margin-left: 1rem;
+  }
+  
+  .form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  
+  .btn-outline-primary {
+    border-radius: 0.375rem;
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Media query for mobile */
+  @media (max-width: 992px) {
+    .navbar {
+      padding: 1rem 1.5rem; /* Adjust padding for mobile */
+    }
+  
+    .navbar-brand {
+      font-size: 2rem; /* Slightly smaller brand text */
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 1.25rem;
+      padding: 0.75rem 1.25rem; /* Adjust padding for mobile */
+    }
+  
+    .d-flex.input-group {
+      margin-top: 1rem;
+    }
+  }
+  
