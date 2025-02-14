@@ -7,10 +7,15 @@ import hide from '../Assets/hide.png'; // Correct relative path
 import user from '../Assets/user.png'; // Correct relative path
 
 
+
+
+
 export const LoginSignup = () => { // Changed to PascalCase (React convention)
   const [action, setAction] = useState("Sign Up");
 
   return (
+    <div className="login-signup-page">
+      <div className="login-signup-content"></div>
     <div className="container">
       {/* Header Section */}
       <div className="header">
@@ -20,10 +25,12 @@ export const LoginSignup = () => { // Changed to PascalCase (React convention)
 
       {/* Input Fields */}
       <div className="inputs">
+        {action==="Login"?<div></div>:
         <div className="input">
           <img src={user} alt="User Icon" />
           <input type="text" placeholder="Name" />
         </div>
+      }
 
         <div className="input">
           <img src={email} alt="Email Icon" />
@@ -37,25 +44,29 @@ export const LoginSignup = () => { // Changed to PascalCase (React convention)
       </div>
 
       {/* Forgot Password Section */}
+      {action==="Sign Up"?<div></div>:
       <div className="forgot-password">
         Lost Password? <span>Click Here</span>
       </div>
+     }
 
       {/* Submit Buttons */}
       <div className="Submit-container">
         <div
-          className={`submit ${action === "Login" ? "gray" : ""}`}
+          className={action==="Login"?"submit gray":"submit"}
           onClick={() => setAction("Sign Up")}
         >
           Sign Up
         </div>
         <div
-          className={`submit ${action === "Sign Up" ? "gray" : ""}`}
+          className={action==="Sign Up"?"submit gray":"submit"}
           onClick={() => setAction("Login")}
         >
           Login
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };

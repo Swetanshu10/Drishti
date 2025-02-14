@@ -1,59 +1,50 @@
-import React, { useState, useEffect } from "react";
-import "./Navbar.css";
-import { Menu, X } from "lucide-react";
-import "mdb-ui-kit/css/mdb.min.css"; // Import MDB styles
-import { Collapse, Ripple, initMDB } from "mdb-ui-kit";
-import appLogo from "../Assets/app_logo.png"
+// Navbar.js
+import React from 'react';
+import './Navbar.css';
+import appLogo from '../Assets/app_logo.png';
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
-  // Initialize MDB components when the component mounts
-  useEffect(() => {
-    initMDB({ Collapse, Ripple });
-  }, []);
 
+const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-      <div className="container-fluid">
-        <img className="navbar-brand" src={appLogo} alt="AppLogo"/>
-        
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X size={30} /> : <Menu size={30} />}
-        </button>
-        
-        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarTogglerDemo02">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="">Sign In</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">Location</a>
-            </li>
-          </ul>
-          <form className="d-flex input-group w-auto">
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Type query"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-primary" type="button">
-              Search
-            </button>
-          </form>
-        </div>
+    <div>
+    <nav className="navbar">
+      <div className="navbar-content">
+        <a href="/" className="navbar-brand">
+          <img src={appLogo} alt="App Logo" className="navbar-logo" />
+        </a>
+        <ul className="navbar-links">
+          <li>
+            <a href="/" className="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="/signup" className="navbar-link">Sign Up</a>
+          </li>
+          <li>
+            <a href="/location" className="navbar-link">Location</a>
+          </li>
+          <li>
+            <a href="/emergency" className="navbar-link">Emergency</a>
+          </li>
+        </ul>
       </div>
     </nav>
+
+    <div className="about-us-container"> {/* Container for About Us info */}
+        <div className="about-us-content"> {/* Content area for About Us */}
+          <h2>About Us</h2>
+          <p>
+            This is where you will write information about your application or company.
+            You can add multiple paragraphs, images, and other content here.  This example
+            demonstrates how to position the "About Us" section to the right of the navbar.
+          </p>
+          {/* Add more content as needed */}
+        </div>
+      </div>
+
+    </div>
+    
   );
-}
+};
+
+export default Navbar;

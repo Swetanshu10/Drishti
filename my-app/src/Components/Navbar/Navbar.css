@@ -1,136 +1,144 @@
-/* General Navbar styles */
+/* Navbar.css */
 .navbar {
-    background-color: #f8f9fa; /* Light background */
-    position: fixed; /* Fixes navbar to the top */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Span full width */
-    padding: 1.5rem 3rem; /* Increased padding for larger size */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    z-index: 1000; /* Ensure it stays on top of other content */
-    height: 90px; /* Increased height for a bigger navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Glass transparent effect */
+  padding: 1rem;
+  z-index: 1050;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; /* Elegant font */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-link {
+  color: #ffffff; /* White text for contrast */
+  text-decoration: none;
+  margin-left: 1.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif; /* Stylish font */
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  background: #073a64;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #022738; /* Vibrant highlight */
+  transform: scale(1.1);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem;
   }
   
-  /* Branding */
-  .navbar-brand {
-    font-size: 2.5rem; /* Larger font size */
-    font-weight: 700;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    width:90px;
-  }
-  
-  .navbar-brand:hover {
-    color: #007bff; /* Change color on hover */
-  }
-  
-  /* Navbar links */
-  .navbar-nav .nav-item .nav-link {
-    color: #555;
-    font-size: 1.5rem; /* Larger font size */
-    padding: 0.75rem 1.5rem; /* Larger padding */
-    transition: color 0.3s ease;
-    width:120px;
-  }
-  
-  .navbar-nav .nav-item .nav-link:hover {
-    color: #007bff; /* Blue on hover */
-  }
-  
-  /* Disabled state */
-  .navbar-nav .nav-item .nav-link.disabled {
-    color: #6c757d;
-    pointer-events: none;
-  }
-  
-  /* Navbar Toggle Button */
-  .navbar-toggler {
-    border: none;
-    background-color: transparent;
-    color: #333;
-    font-size: 1.75rem; /* Larger toggle button */
-  }
-  
-  .navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
-  }
-  
-  /* For mobile view, adjust navbar content */
-  .collapse.navbar-collapse {
-    transition: max-height 0.3s ease-out;
-  }
-  
-  .collapse.navbar-collapse.show {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem; /* Increased gap between items */
-  }
-  
-  /* Adjust navbar links for mobile */
-  .navbar-nav {
+  .navbar-content {
     flex-direction: column;
     align-items: center;
-    padding-left: 0;
   }
-  
-  .navbar-nav .nav-item {
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .navbar-link {
+    margin: 5px 0;
+    padding: 0.7rem;
     width: 100%;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
   }
+}
+
+
+
+/* About Us Container Styles (Transparent) */
+.about-us-container {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center; /* Vertically center */
+  padding: 20px; /* Add some padding */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Optional: Add a blur effect */
+  margin-top: -50px; /* Space between navbar and content */
+  border-radius: 10px;
+  height:500px; 
+  width:60%;/* Optional: Add rounded corners */
+}
+
+.about-us-content {
+  max-width: 60%; /* Limit the width of the content */
+  text-align: left; /* Align text to the left */
+  color: #fff; /* White text for contrast against the transparent background */
   
-  .navbar-nav .nav-link {
-    padding: 1rem 0;
-    width: 100%;
-  }
-  
-  /* Style search form */
-  .d-flex.input-group {
-    margin-left: 1rem;
-  }
-  
-  .form-control {
-    border-radius: 0.375rem;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-  }
-  
-  .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-  }
-  
-  .btn-outline-primary {
-    border-radius: 0.375rem;
-    border: 1px solid #007bff;
-    color: #007bff;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Media query for mobile */
-  @media (max-width: 992px) {
-    .navbar {
-      padding: 1rem 1.5rem; /* Adjust padding for mobile */
-    }
-  
-    .navbar-brand {
-      font-size: 2rem; /* Slightly smaller brand text */
-    }
-  
-    .navbar-nav .nav-link {
-      font-size: 1.25rem;
-      padding: 0.75rem 1.25rem; /* Adjust padding for mobile */
-    }
-  
-    .d-flex.input-group {
-      margin-top: 1rem;
-    }
-  }
-  
+  font-size:40px;
+}
+.about-us-content h2 {
+  font-size: 2rem; /* Adjust font size as needed */
+  margin-bottom: 1rem; /* Space between heading and paragraph */
+  color: #fff; /* White or a color that contrasts with the background */
+  font-weight: 600; /* Example font weight */
+  font-family: 'YourHeadingFont', sans-serif; /* Example font. Import this or choose another. */
+}
+
+.about-us-content p {
+  font-size: 1rem; /* Adjust font size as needed */
+  line-height: 1.6; /* Improve readability */
+  color: #eee; /* Slightly lighter white for the paragraph text */
+  font-family: 'YourParagraphFont', sans-serif; /* Example font. Import this or choose another. */
+}
+
+/* Optional: Style links within the paragraph */
+.about-us-content p a {
+  color: #ff7300; /* Gold or your accent color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-us-content p a:hover {
+  text-decoration: underline;
+}
+
