@@ -1,25 +1,34 @@
 /* Outer Div Styling */
 .outer-div {
-  background: rgba(255, 255, 255, 0.1); /* Glass transparent effect */
-  backdrop-filter: blur(10px); /* Blur effect for glass transparency */
+  background: rgba(255, 255, 255, 0.1);
+  /* Glass transparent effect */
+  backdrop-filter: blur(10px);
+  /* Blur effect for glass transparency */
   border-radius: 15px;
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 8vh;
 }
 
 /* Title Styling */
 .outer-div h1 {
-  font-size: 60px; /* Large and bold title */
+  font-size: 60px;
+  /* Large and bold title */
   font-weight: 700;
   text-align: center;
-  background: linear-gradient(90deg, #2a2827, #332f2f); /* Blue gradient */
+  background: linear-gradient(90deg, #2a2827, #332f2f);
+  /* Blue gradient */
   -webkit-background-clip: text;
-  color: transparent; /* Gradient text effect */
-  text-shadow: 0 4px 6px rgba(255, 255, 255, 0.4); /* Soft glow effect */
+  color: transparent;
+  /* Gradient text effect */
+  text-shadow: 0 4px 6px rgba(255, 255, 255, 0.4);
+  /* Soft glow effect */
   letter-spacing: 2px;
-  animation: textPulse 1.5s ease-in-out infinite; /* Smooth pulsing effect */
+  animation: textPulse 1.5s ease-in-out infinite;
+  /* Smooth pulsing effect */
   display: inline-block;
   position: relative;
 }
@@ -28,9 +37,12 @@
 .outer-div h1::after {
   content: "";
   display: block;
-  width: 100px; /* Width of the underline */
-  height: 6px; /* Thickness of the underline */
-  background-color: #ff7b00; /* Vibrant orange */
+  width: 100px;
+  /* Width of the underline */
+  height: 6px;
+  /* Thickness of the underline */
+  background-color: #ff7b00;
+  /* Vibrant orange */
   border-radius: 10px;
   margin: 8px auto 0;
   animation: underlinePulse 2s ease-in-out infinite;
@@ -41,9 +53,11 @@
   0% {
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
+
   50% {
     text-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
   }
+
   100% {
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
@@ -55,10 +69,12 @@
     transform: scaleX(1);
     opacity: 0.8;
   }
+
   50% {
     transform: scaleX(1.2);
     opacity: 1;
   }
+
   100% {
     transform: scaleX(1);
     opacity: 0.8;
@@ -67,11 +83,14 @@
 
 /* Inner Div Styling */
 .inner-div {
-  background: rgba(255, 255, 255, 0.8); /* Slightly opaque background */
+  background: rgba(255, 255, 255, 0.8);
+  /* Slightly opaque background */
   border-radius: 10px;
   padding: 15px;
-  height: 500px; /* Fixed height for inner div */
-  overflow-y: auto; /* Scrollbar for overflow */
+  height: 420px;
+  /* Fixed height for inner div */
+  overflow-y: auto;
+  /* Scrollbar for overflow */
 }
 
 /* Chat Messages Styling */
@@ -120,6 +139,7 @@
 .row {
   justify-content: center;
 }
+
 /* Flexbox container for alignment */
 .d-flex {
   display: flex;
@@ -137,7 +157,8 @@
 
 /* Small text size */
 .small {
-  font-size: 0.875rem; /* Equivalent to Bootstrap's small text size */
+  font-size: 0.875rem;
+  /* Equivalent to Bootstrap's small text size */
 }
 
 /* Padding around the text */
@@ -161,12 +182,14 @@
 
 /* Text color styles */
 .custom-text {
-  color: #0e0e0e !important; /* Green color example */
+  color: #0e0e0e !important;
+  /* Green color example */
 }
 
 
 .text-muted {
-  color: #0c0c0c; /* Bootstrap muted text color */
+  color: #0c0c0c;
+  /* Bootstrap muted text color */
 }
 
 /* Rounded corners */
@@ -176,8 +199,9 @@
 
 /* Background color for primary theme */
 .custom-bg {
-  background-color:rgba(241, 222, 222, 0.6);
+  background-color: rgba(241, 222, 222, 0.6);
 }
+
 /* Avatar image styling */
 .avatar-img {
   width: 62px;
@@ -185,12 +209,28 @@
 }
 
 .inner-div {
-  background: rgba(255, 255, 255, 0.2); /* Light transparent white */
-  backdrop-filter: blur(10px); /* Blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-radius: 15px; /* Rounded corners */
-  padding: 20px; /* Space inside */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+  background: rgba(255, 255, 255, 0.2);
+  /* Light transparent white */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* Safari support */
+  border-radius: 15px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Space inside */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Light border for glass effect */
 }
 
+.outer-div button {
+  margin-top: 20px;
+  border: none;
+  color: white;
+  background: #073a64;
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 10px;
+}

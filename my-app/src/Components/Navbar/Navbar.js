@@ -1,48 +1,58 @@
-// Navbar.js
+
 import React from 'react';
 import './Navbar.css';
 import appLogo from '../Assets/app_logo.png';
+import { initializeApp } from "firebase/app";
+import { getAuth, signOut } from "firebase/auth";
+import { useNavigate } from 'react-router';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBqel6Wl-Ig_7L4eTMfebMCRlzkowBQ9fU",
+  authDomain: "finalyear-14b62.firebaseapp.com",
+  databaseURL: "https://finalyear-14b62-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "finalyear-14b62",
+  storageBucket: "finalyear-14b62.firebasestorage.app",
+  messagingSenderId: "548992273872",
+  appId: "1:548992273872:web:4a4d8bbf28fbe5285d3dd5",
+  measurementId: "G-8BR1DC4ZNJ"
+}
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 
 const Navbar = () => {
+  let navigate=useNavigate()
+
   return (
-    <div>
     <nav className="navbar">
       <div className="navbar-content">
-        <a href="/" className="navbar-brand">
-          <img src={appLogo} alt="App Logo" className="navbar-logo" />
-        </a>
+        <img src={appLogo} alt="App Logo" className="navbar-logo" />
         <ul className="navbar-links">
           <li>
-            <a href="/" className="navbar-link">Home</a>
+            <a href="/Home" className="navbar-link">Home</a>
           </li>
           <li>
-            <a href="/signup" className="navbar-link">Sign Up</a>
+            <a href="/" className="navbar-link">Sign Up</a>
+          </li>
+          {/* <li>
+            <a href="/" className="navbar-link">Location</a> 
+          </li> */}
+          <li>
+            <a href="/Emergency" className="navbar-link">Emergency</a>
           </li>
           <li>
-            <a href="/location" className="navbar-link">Location</a>
+            <button className="logOut"
+            onClick={()=>{
+              signOut(auth).then(() => {
+                navigate("/")
+              }).catch((error) => {
+                alert(error.message)
+              });
+            }}>Log out</button>
           </li>
-          <li>
-            <a href="/emergency" className="navbar-link">Emergency</a>
-          </li>
-        </ul>
+        </ul> 
       </div>
     </nav>
-
-    <div className="about-us-container"> {/* Container for About Us info */}
-        <div className="about-us-content"> {/* Content area for About Us */}
-          <h2>About Us</h2>
-          <p>
-            This is where you will write information about your application or company.
-            You can add multiple paragraphs, images, and other content here.  This example
-            demonstrates how to position the "About Us" section to the right of the navbar.
-          </p>
-          {/* Add more content as needed */}
-        </div>
-      </div>
-
-    </div>
     
   );
 };
