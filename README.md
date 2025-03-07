@@ -1,3 +1,7 @@
+
+Video Demo of App
+https://github.com/user-attachments/assets/fe438ec0-48d2-40d8-8bcd-b1bbe55b818b
+
 # PROJECT DESCRIPTION
 The project is a smart physical assistant for blind persons, under this project, we are developing a smart stick with sensors,camera, button and microcontrollers to help blind person safely navigate, this is a companion web
 application which would be used by family members/friends of the blind person. 
