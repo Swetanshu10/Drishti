@@ -22,11 +22,13 @@ const HomeComponent=()=>{
     let navigate = useNavigate()
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const authUnsub=onAuthStateChanged(auth, (user) => {
             if (!user) {
                 navigate("/")
             }
         })
+
+        return () => authUnsub()
     }, [])
 
     return(
