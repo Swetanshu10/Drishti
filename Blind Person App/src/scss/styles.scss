@@ -1,12 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 
-
-@mixin func1($param) {
-    flex-direction: $param;
-}
-
 body {
-    @include func1(row);
     align-content: center;
     height: 100vh;
     background-color: rgb(0, 145, 255);
