@@ -18,7 +18,7 @@ function App()
            <Route path="/Emergency" element={<ChatComponent/>}/>
         </Routes>
      </BrowserRouter>
-  )
+   )
 }
 
 export default App;

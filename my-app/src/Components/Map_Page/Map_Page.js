@@ -77,7 +77,7 @@ export function MapComponent(){
         <>
             <Navbar/>
             <div className="outer-box">
-                <h1>Location Tracking</h1>
+                <h1>LOCATION TRACKING</h1>
 
                 <div className="inner-box" id="map" ref={mapRef}>
                 </div>
