@@ -1,4 +1,9 @@
 
+
+# System Design
+![image](https://github.com/user-attachments/assets/c0003ba7-a727-4da0-b138-4ba80fd3fcdd)
+
+
 # Update 1/4/2025
 Developed the blind person app which retrieves location coordinates using geolocation api and store this data in firebase which is then read in the my-app and the location marker is shown on map using leaflet.js library based on retrived coordinates. The my-app has feature to control when the location should be shared and when not
 
