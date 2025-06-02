@@ -1,0 +1,68 @@
+/* About Us Container Styles (Transparent) */
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    /* Align to the right */
+    align-items: center;
+    /* Vertically center */
+    padding: 20px;
+    /* Add some padding */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white background */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    /* Optional: Add a blur effect */
+    margin: 50px auto 0px auto;
+    /* Space between navbar and content */
+    border-radius: 10px;
+    height: 570px;
+    width: 80%;
+    /* Optional: Add rounded corners */
+}
+
+.about-us-content {
+    max-width: 60%;
+    /* Limit the width of the content */
+    text-align: left;
+    /* Align text to the left */
+    color: #fff;
+    /* White text for contrast against the transparent background */
+
+    font-size: 40px;
+}
+
+.about-us-content h2 {
+    font-size: 2rem;
+    /* Adjust font size as needed */
+    margin-bottom: 1rem;
+    /* Space between heading and paragraph */
+    color: #fff;
+    /* White or a color that contrasts with the background */
+    font-weight: 600;
+    /* Example font weight */
+    font-family: 'YourHeadingFont', sans-serif;
+    /* Example font. Import this or choose another. */
+}
+
+.about-us-content p {
+    font-size: 1.3rem;
+    /* Adjust font size as needed */
+    line-height: 1.6;
+    /* Improve readability */
+    color: #eee;
+    /* Slightly lighter white for the paragraph text */
+    font-family: 'YourParagraphFont', sans-serif;
+    /* Example font. Import this or choose another. */
+}
+
+/* Optional: Style links within the paragraph */
+.about-us-content p a {
+    color: #ff7300;
+    /* Gold or your accent color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-us-content p a:hover {
+    text-decoration: underline;
+}

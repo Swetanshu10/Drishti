@@ -1,0 +1,41 @@
+description: Ultralytics my_model model trained on /content/Smart-Physical-Assistant-1/data.yaml
+author: Ultralytics
+date: '2025-04-03T19:07:36.524021'
+version: 8.3.97
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: Potholes
+  1: bench
+  2: bicycle
+  3: bike
+  4: bin
+  5: bus
+  6: bush
+  7: car
+  8: cng
+  9: fence
+  10: minipole
+  11: miniwall
+  12: other-vehicle
+  13: person
+  14: person-like
+  15: pinetree
+  16: pole
+  17: rickshaw
+  18: scooter
+  19: staircase
+  20: tree
+  21: truck
+  22: trunk
+  23: wall
+  24: zebra cross
+args:
+  batch: 1
+  half: false
