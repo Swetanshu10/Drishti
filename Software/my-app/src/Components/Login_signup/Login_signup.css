@@ -1,0 +1,306 @@
+.input {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.input img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Adjust icon styling */
+.input img {
+  width: 22px;
+  height: 22px;
+  margin: 0 15px;
+  opacity: 0.8;
+}
+
+/* Smooth hover effect */
+.input:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Apply background image only to the login/signup page */
+
+
+
+
+
+
+
+
+/*.container {
+  display: flex;
+  flex-direction: column;
+  margin-top:600px;
+
+  margin:50px auto;
+
+  width: 550px;
+  height:620px;
+  justify-content: center; 
+  align-items: center; 
+  background: white; 
+  padding: 30px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+  */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 620px;
+  justify-content: center;
+  align-items: center;
+
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.15);
+  /* Semi-transparent background */
+  backdrop-filter: blur(12px);
+  /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  /* Safari support */
+
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Soft shadow for depth */
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  /* Subtle border */
+}
+
+
+
+/*.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.text {
+  color:rgb(215, 218, 222);
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.underline {
+  width: 61px;
+  height: 6px;
+  background-color:#073a64;
+  border-radius: 10px;
+}
+  */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* Increased gap for better spacing */
+  width: 100%;
+  margin-top: 40px;
+  /* Slightly increased margin for better balance */
+  text-align: center;
+  /* Center text for better alignment */
+}
+
+.text {
+  color: #fff;
+  font-size: 60px;
+  /* Increased font size */
+  font-weight: 700;
+  background: linear-gradient(90deg, #0b81dc, #19cfe3);
+  /* Gradient text */
+  -webkit-background-clip: text;
+  color: transparent;
+  /* Makes the gradient visible */
+  text-shadow: 0 4px 6px rgba(238, 236, 243, 0.4);
+  /* Soft shadow for a pop-out effect */
+  letter-spacing: 1px;
+  /* Slight letter spacing for readability */
+  animation: textPulse 1.5s ease-in-out infinite;
+  /* Animation for text */
+}
+
+.underline {
+  width: 80px;
+  /* Slightly increased width for more impact */
+  height: 8px;
+  /* Increased height for a bolder underline */
+  background-color: #ff7b00;
+  /* A vibrant orange color for the underline */
+  border-radius: 10px;
+  animation: underlinePulse 2s ease-in-out infinite;
+  /* Animation for underline */
+}
+
+/* Pulse animation for the text */
+@keyframes textPulse {
+  0% {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  50% {
+    text-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  100% {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Pulse animation for the underline */
+@keyframes underlinePulse {
+  0% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scaleX(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+}
+
+
+.inputs {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 480px;
+  height: 60px;
+  background: rgb(215, 218, 222);
+  border-radius: 6px;
+}
+
+.input img {
+  margin: 0px 30px;
+}
+
+.input input {
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(71, 73, 75);
+  /* Adjusted color for better visibility */
+  font-size: 19px;
+}
+
+.forgot-password {
+  align-self: flex-start;
+  /* Aligns it to the left */
+  margin-top: 15px;
+  /* Adjusts positioning closer to the password field */
+  padding-left: 50px;
+  /* Aligns with input fields */
+  color: rgb(71, 73, 75);
+  font-size: 18px;
+}
+
+
+
+.forgot-password span {
+  color: #073a64;
+  cursor: pointer;
+  padding-left: 0px;
+  margin-top: 30px;
+}
+
+.Submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.proceed-container {
+  display: flex;
+  gap: 30px;
+  margin: 30px auto;
+}
+
+
+.submit,
+.proceed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  color: white;
+  background: #073a64;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(7, 58, 100, 0.7);
+}
+
+/* Glowing Effect on Hover */
+.submit:hover,
+.proceed:hover {
+  box-shadow: 0 0 20px rgba(7, 58, 100, 1), 0 0 40px rgba(7, 58, 100, 0.8);
+  transform: scale(1.05);
+  /* Slight scaling effect */
+}
+
+/* Glowing Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(7, 58, 100, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(7, 58, 100, 1), 0 0 40px rgba(7, 58, 100, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(7, 58, 100, 0.7);
+  }
+}
+
+/* Apply the glow effect continuously */
+.submit {
+  animation: glow 2s infinite alternate;
+}
+
+
+.gray {
+  background-color: #eaeaea;
+  color: rgb(71, 73, 75);
+}
