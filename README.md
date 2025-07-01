@@ -25,3 +25,7 @@ and links. I worked with React, react-hooks , react-router and firebase to fetch
 
 # BACKEND
 Firebase
+
+# DATABASE
+1. Firestore NoSQL database
+2. Firebase real-time database
