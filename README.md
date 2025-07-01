@@ -20,8 +20,8 @@ and links. I worked with React, react-hooks , react-router and firebase to fetch
 # TECH STACK
 
 # FRONTEND
-React
-Web APIs
+1. React
+2. Web APIs
 
 # BACKEND
 Firebase
