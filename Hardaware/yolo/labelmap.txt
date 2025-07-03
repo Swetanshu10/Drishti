@@ -1,0 +1,6 @@
+person
+staircase
+wall
+potholes
+vehicles
+zebra cross
